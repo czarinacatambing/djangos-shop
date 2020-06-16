@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('shop.urls', namespace='shop'))
 ]
+
+# need below to access the MEDIA_URL for images in settings.py
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, 
+                            document_root=settings.MEDIA_ROOT)
+# only serve static files this way during development. In a production environment, you should never serve static files with Django; the Django development server doesn't serve static files in an efficient manner. Chapter 14, Going Live, will teach you how to serve static files in a production environment.                    #    
