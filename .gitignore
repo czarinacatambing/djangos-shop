@@ -1,0 +1,14 @@
+  GNU nano 2.0.6                File: .gitignore                                       
+
+*/__pycache__/*
+
+*.pyc
+*.pyo
+
+
+
+
+
+
+
+
