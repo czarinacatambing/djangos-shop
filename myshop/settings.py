@@ -132,3 +132,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 #  this is causing sessions to not save, comment out for now
 # SESSION_COOKIE_DOMAIN = 'mydomain.com'
 CART_SESSION_ID = 'cart'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
