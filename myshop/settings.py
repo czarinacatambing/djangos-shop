@@ -82,8 +82,14 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres', # The Server name from 1.5
+        'USER': 'postgres', # The username from 1.6
+        'PASSWORD': 'password123', # The password from installation
+        'HOST': 'localhost', # Host name/address from 1.6
+        'PORT': '5432' # Port from 1.6
     }
 }
 
@@ -118,7 +124,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
