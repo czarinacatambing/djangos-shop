@@ -27,7 +27,7 @@ SECRET_KEY = '3&#f!!6ga3+2(^mk&@(u@6jhe@6k&w#spr1wj150a6-#i=+@!('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['infinite-eyrie-75605.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
