@@ -12,15 +12,11 @@ from .forms import CartAddProductForm
 # Create your views here.
 @require_POST
 def cart_add(request, product_id):
-    print("receive request to add")
     cart= Cart(request)
     product = get_object_or_404(Product, id=product_id)
-    print("product")
-    print(product)
     form = CartAddProductForm(request.POST)
 
     if form.is_valid():
-        print("valid form")
         cd = form.cleaned_data 
         cart.add(product=product,
                 quantity=cd['quantity'],
@@ -37,7 +33,4 @@ def cart_remove(request, product_id):
 def cart_detail(request):
     cart = Cart(request)
     cart_product_form = CartAddProductForm()
-    print("cart_detail")
-    print(cart_product_form)
-    print(cart)
     return render(request, 'cart/detail.html', {'cart':cart, 'cart_product_form': cart_product_form})
