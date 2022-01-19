@@ -1,5 +1,4 @@
-# Building an e-commerce shop with Django
-This is an exercise to learn how to build web apps with Django. 
+# E-commerce shop with Django
 
 - To run, clone this repository to your local machine. 
 - `cd` to the directory that contains this repository
